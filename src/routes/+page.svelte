@@ -42,9 +42,7 @@
         align-items: center;
         width: 100vw;
         height: 100vh;
-        h1{
-            font-size: large;
-        }
+        
     }
 
     div.content {
@@ -54,6 +52,14 @@
         width: 66vw;
         height: 80vh;
         
+    }
+    div.sidebar {
+        flex-grow: 1;
+    }
+    
+    div.news {
+        margin-left: 90px;
+        flex-grow: 2.5;
     }
 
 </style>
