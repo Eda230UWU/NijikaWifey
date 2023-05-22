@@ -23,7 +23,10 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          npm i -D @sveltejs/adapter-node -D sass
+          npm i -D @sveltejs/adapter-node
+          npm i -D node-sass
+          npx svelte-add@latest scss
+          npm i
           npm run build --if-present
           npm run test --if-present
 
