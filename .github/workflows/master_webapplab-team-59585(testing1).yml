@@ -27,7 +27,8 @@ jobs:
           npm i -D node-sass
           npx svelte-add@latest scss
           npm i
-          npm run build --if-present
+          npm run build
+          
           npm run test --if-present
 
       - name: Upload artifact for deployment job
