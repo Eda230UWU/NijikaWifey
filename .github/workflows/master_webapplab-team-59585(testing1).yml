@@ -27,6 +27,7 @@ jobs:
           npm i -D node-sass
           npx svelte-add@latest scss
           npm i
+          npm run build
           HOST=0.0.0.0 PORT=8080 node build
           npm run test --if-present
 
