@@ -1,12 +1,15 @@
 <script>
-    import Navbar from "../nested/navbar/navbar.svelte";
-    import Mal_win from "../nested/mal_win/mal.svelte";
-    import Quick_links from "../nested/quick_links/quick.svelte";
-    import News from "../nested/news/news.svelte";
-    import { Client, fetchRandom } from "nekos-best.js";
-
-    export const colors_dark = [];
-    export const colors_light = ["#ffffff", "#acacac"];
+    import Navbar from "../nested/navbar/navbar.svelte"
+    import Mal_win from "../nested/mal_win/mal.svelte"
+    import Quick_links from "../nested/quick_links/quick.svelte"
+    import News from "../nested/news/news.svelte"
+    
+    
+    
+    import { colors } from "../routes/colors.js"
+    const colors_dark = colors[0].dark;
+    const colors_light = colors[0].light;
+   
 
     async function getNeko() {
         const response = await fetch("https://nekos.best/api/v2/neko");
@@ -17,9 +20,10 @@
     let uwu = getNeko();
 </script>
 
-<div class="main" style:background-color={colors_light[0]}>
-    <Navbar />
-    <div class="content" style:background-color={colors_light[1]}>
+
+<div class="main" style:background-color="#ffffff">
+    <Navbar/>
+    <div class="content" style:background-color="#acacac">
         <div class="sidebar">
             <Mal_win />
             <Quick_links />
@@ -51,16 +55,26 @@
             font-size: large;
         }
     }
-
+    
     div.content {
         margin-top: 50px;
         display: flex;
         flex-direction: row;
-        width: 66vw;
+        width: 80vw;
         height: 80vh;
     }
     #nekos {
         height: 10em;
         width: 10em;
+    }
+    div.sidebar {
+        flex-grow: 1;
+        min-width: 150px;
+    }
+    
+    div.news {
+        margin-left: 90px;
+        flex-grow: 2.5;
+        padding: 20px;
     }
 </style>
