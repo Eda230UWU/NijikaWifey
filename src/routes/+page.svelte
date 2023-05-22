@@ -3,16 +3,20 @@
     import Mal_win from "../nested/mal_win/mal.svelte"
     import Quick_links from "../nested/quick_links/quick.svelte"
     import News from "../nested/news/news.svelte"
-
-    export const colors_dark = [];
-    export const colors_light = ["#ffffff", "#acacac"];
+    
+    
+    
+    import { colors } from "../routes/colors.js"
+    const colors_dark = colors[0].dark;
+    const colors_light = colors[0].light;
+   
 
 </script>
 
 
-<div class="main" style:background-color={colors_light[0]}>
+<div class="main" style:background-color="#ffffff">
     <Navbar/>
-    <div class="content" style:background-color={colors_light[1]}>
+    <div class="content" style:background-color="#acacac">
         <div class="sidebar">
             <Mal_win/>
             <Quick_links/>
@@ -44,22 +48,25 @@
         height: 100vh;
         
     }
-
+    
     div.content {
         margin-top: 50px;
         display: flex;
         flex-direction: row;
-        width: 66vw;
+        width: 80vw;
         height: 80vh;
+        min-width: 1000px;
         
     }
     div.sidebar {
         flex-grow: 1;
+        min-width: 150px;
     }
     
     div.news {
         margin-left: 90px;
         flex-grow: 2.5;
+        padding: 20px;
     }
 
 </style>
