@@ -23,7 +23,6 @@
             </div>
             <div class="news">
                 <News />
-                <a href="/nekos">Nekos!</a>
             </div>
         </div>
         
@@ -57,7 +56,7 @@
     div.content {
         margin-top: 50px;
         margin: 50px auto 20px auto;
-        max-width: 80vw;
+        max-width: calc(80% - 20px);
         padding: 10px;
         min-width: 1000px;
         

@@ -5,8 +5,13 @@
     const colors_logo = colors[0].color_logo;
 </script>
 
-<header class="navBar" style:background-color={head_primary[0]}>
-    <div class="logo" style:background-color={colors_logo[0]} />
+<header class="navbar" style:background-color={head_primary[0]}>
+    <div class="flex">
+        <div class="logo">
+            <img src="/logo.png" />
+        </div>
+        <h1>NijikaWeb</h1>
+    </div>
     <section style:background-color={head_navbar[0]}>
         <div>
             <input
@@ -17,43 +22,57 @@
             />
         </div>
     </section>
+    <div />
 </header>
 
 <style lang="scss">
     :global(body) {
         margin: 0;
     }
-    header {
-        padding: 0 20%;
-        display: flex;
-        justify-content: space-between;
-        width: 60%;
-        .logo {
-            height: 3.5em;
-            width: 3.5em;
-            margin: 1em 0;
-        }
-        h3 {
-            color: aqua;
-            margin: 0;
-        }
-        section {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            width: 66%;
-            margin: 20px 10px;
-            border-radius:1em ;
 
-            input {
-                padding: 15px 20px;
-                height: 1.5em;
-                width: 35em;
-                border:0;
-                border-radius: 5px;
-                border-color: #DFDFDF;
-                inset-block-start: 2px;
-            }
+    div.logo img {
+        width: 100%;
+    }
+
+    div.logo {
+        height: 80px;
+        width: 80px;
+        margin-right: 20px;
+    }
+
+    div.flex {
+        margin-left: 10%;
+        display: flex;
+        align-items: center;
+    }
+
+    header.navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100px;
+        align-items: center;
+        width: 100vw;
+    }
+
+    h3 {
+        color: aqua;
+        margin: 0;
+    }
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 40%;
+
+        input {
+            padding: 15px 20px;
+            height: 1.5em;
+            width: 35em;
+            border: 0;
+            border-radius: 5px;
+            border-color: #dfdfdf;
+            inset-block-start: 2px;
         }
     }
 </style>
