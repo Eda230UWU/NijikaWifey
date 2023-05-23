@@ -11,13 +11,6 @@
     const colors_light = colors[0].light;
    
 
-    async function getNeko() {
-        const response = await fetch("https://nekos.best/api/v2/neko");
-        const json = await response.json();
-        console.log(json.results[0].url);
-        return json;
-    }
-    let uwu = getNeko();
 </script>
 
 
@@ -29,13 +22,9 @@
             <Quick_links />
         </div>
         <div class="news">
-            <News />
+            <News />  
+            <a href="../nekos">Nekos!</a>
         </div>
-        {#await uwu then owo}
-        <div style="background-image=url{owo}" id="nekos">
-            <img src="{owo}" alt="">
-        </div>
-        {/await}
     </div>
 </div>
 
@@ -63,10 +52,6 @@
         width: 80vw;
         height: 80vh;
     }
-    #nekos {
-        height: 10em;
-        width: 10em;
-    }
     div.sidebar {
         flex-grow: 1;
         min-width: 150px;
@@ -77,4 +62,5 @@
         flex-grow: 2.5;
         padding: 20px;
     }
+
 </style>
