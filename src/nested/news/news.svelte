@@ -11,6 +11,13 @@
         return get_season_now;
     }
 
+    async function season_next() {
+        const response = await fetch("https://api.jikan.moe/v4/seasons/upcoming");
+        const get_season_now = await response.json();
+        console.log(get_season_now)
+        return get_season_now;
+    }
+
     function convert(time) {
         const timezone = "GMT+9";
         const target = "Europe/London";
@@ -36,9 +43,9 @@
 
     {:then season_info}
     <div class="animation">
-        <div class="scroll" style:background-color={colors_secondary[0]}>
-        {#each season_info.data as info}
-            <div class="box1">
+        <div class="scroll">
+        {#each season_info.data as info, i}
+            <div class="box1" id={i + 1}>
                 <div>
                     <h2><a href={info.url}>{info.title}</a></h2>
                     <i>Airing: {info.broadcast.day} {convert(info.broadcast.time)}</i>
