@@ -7,13 +7,15 @@
     import { colors } from "../routes/colors.js";
     const colors_dark = colors[0].dark;
     const colors_light = colors[0].light;
+    const colors_primary = colors[0].color_primary;
+    const colors_secondary = colors[0].color_secondary;
    
 
 </script>
 
-<div class="main" style:background-color={colors_light[1]}>
+<div class="main" style:background-color={colors_primary[0]}>
     <Navbar />
-    <div class="content" style:background-color="#acacac">
+    <div class="content" style:background-color={colors_secondary[0]}>
         <div class="flex">
             <div class="sidebar">
                 <Mal_win />
