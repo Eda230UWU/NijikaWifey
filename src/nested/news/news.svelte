@@ -35,16 +35,16 @@
 
     {:then season_info}
     <div class="animation">
-    <div class="scroll">
+        <div class="scroll">
         {#each season_info.data as info}
             <div class="box1">
                 <div>
-                <h2><a href={info.url}>{info.title}</a></h2>
-                <i>Airing: {info.broadcast.day} {convert(info.broadcast.time)}</i>
-                <p>{info.score}</p>
+                    <h2><a href={info.url}>{info.title}</a></h2>
+                    <i>Airing: {info.broadcast.day} {convert(info.broadcast.time)}</i>
+                    <p>{info.score}</p>
                 </div>  
                 
-                <img src={info.images.jpg.image_url} alt="image.jpg" />
+                    <img src={info.images.jpg.image_url}>
                 
                 
             </div>
@@ -70,7 +70,7 @@
         max-height: 500px;
         width: inherit;
         overflow: hidden;
-
+        
     }
 
     div.ongoing {
@@ -85,12 +85,13 @@
     div.box1 {
         display: flex;
         flex-direction: column;
-        min-width: calc(20% - 20px);
-        border: 5px;
-        border-color: rgb(43, 74, 74);
+        flex-grow: 1;
+        min-width: calc(20% - 24px);
+        border: solid 2px;
+        border-color: #000000;
         justify-content: space-between;
         margin: 10px;
-
+        height: 400px;
         h2 {
             font-size: 20px;
             font-weight: 500;
@@ -114,12 +115,11 @@
         align-self: flex-end;
     }
     
-    
-    div.img img {
-        align-self: center;
-        height: 50%;
+    img {
+        width: 100%;
+        overflow: hidden;
     }
-
+    
     
 
     
