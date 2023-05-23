@@ -32,7 +32,7 @@
 
 <style lang="scss">
     * {
-        $sec: #ffffff;
+        
         display: flex;
         flex-direction: column;
     }
@@ -68,6 +68,7 @@
 
 
     div.news {
+        min-width: 1000px;
         display: block;
         overflow: hidden;
         margin-left: 90px;
