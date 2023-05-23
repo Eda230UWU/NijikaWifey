@@ -21,7 +21,7 @@
                 <News />
             </div>
         </div>
-        {/await}
+        
     </div>
 </div>
 
