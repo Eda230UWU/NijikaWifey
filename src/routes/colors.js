@@ -1,1 +1,1 @@
-export const colors = [{ dark: ["#000000", "#484848"], light: ["#ffffff", "#cccccc"] }]
+export const colors = [{ dark: ["#000000", "#484848"], light: ["#ffffff", "#cccccc"] , color_primary: ["#cc0000"], color_secondary: ["#ffaa00"]}]
