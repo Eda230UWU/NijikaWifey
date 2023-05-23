@@ -37,7 +37,7 @@
     }
 
     div.main {
-        min-width: 1000px;
+        
         flex-direction: column;
         align-items: center;
         max-width: 100vw;
@@ -58,6 +58,7 @@
         margin: 50px auto 20px auto;
         max-width: 80vw;
         padding: 10px;
+        min-width: 1000px;
         
     }
     div.sidebar {
@@ -67,7 +68,7 @@
 
 
     div.news {
-        min-width: 1000px;
+        
         display: block;
         overflow: hidden;
         margin-left: 90px;
