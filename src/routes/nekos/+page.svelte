@@ -27,6 +27,7 @@
  
 
 <style lang="scss">
+
     #nekos{
         img{
             width: 25%;

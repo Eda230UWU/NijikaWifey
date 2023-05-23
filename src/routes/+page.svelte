@@ -23,6 +23,7 @@
             </div>
             <div class="news">
                 <News />
+                <a href="/nekos">Nekos!</a>
             </div>
         </div>
         
