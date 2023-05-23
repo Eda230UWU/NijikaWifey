@@ -15,15 +15,14 @@
 
 <div class="main" style:background-color={colors_primary[0]}>
     <Navbar />
-    <div class="content" style:background-color={colors_secondary[0]}>
+    <div class="content">
         <div class="flex">
-            <div class="sidebar">
+            <div class="sidebar" style:background-color={colors_secondary[0]}>
                 <Mal_win />
                 <Quick_links />
             </div>
-            <div class="news">
+            <div class="news" style:background-color={colors_secondary[0]}>
                 <News />
-                <a href="/nekos">Nekos!</a>
             </div>
         </div>
         
@@ -31,34 +30,34 @@
 </div>
 
 <style lang="scss">
+
     * {
-        
         display: flex;
         flex-direction: column;
     }
 
     div.main {
-        min-width: 1000px;
         flex-direction: column;
         align-items: center;
         max-width: 100vw;
-        height: 100vh;
+        height: fit-content;
         h1 {
             font-size: large;
         }
     }
 
     div.flex {
-        display: flex;
-        height: 100%;
-        flex-direction: row;
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 3fr 9fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3em;
     }
 
     div.content {
-        margin-top: 50px;
-        margin: 50px auto 20px auto;
-        max-width: 80vw;
-        padding: 10px;
+        height: 80vh;
+        width: 60%;
+        margin: calc(7em + 50px) auto 20px auto;
         
     }
     div.sidebar {
@@ -68,12 +67,9 @@
 
 
     div.news {
-        min-width: 1000px;
-        display: block;
-        overflow: hidden;
-        margin-left: 90px;
         padding: 20px;
         max-width: 100%;
+        
     }
 
 </style>

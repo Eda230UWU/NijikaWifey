@@ -2,6 +2,7 @@
     import { colors } from "../../routes/colors.js";
     const colors_dark = colors[0].dark;
     const colors_light = colors[0].light;
+    const colors_secondary = colors[0].color_secondary;
 
     async function season_now() {
         const response = await fetch("https://api.jikan.moe/v4/seasons/now");
@@ -35,18 +36,16 @@
 
     {:then season_info}
     <div class="animation">
-        <div class="scroll">
+        <div class="scroll" style:background-color={colors_secondary[0]}>
         {#each season_info.data as info}
             <div class="box1">
                 <div>
                     <h2><a href={info.url}>{info.title}</a></h2>
                     <i>Airing: {info.broadcast.day} {convert(info.broadcast.time)}</i>
                     <p>{info.score}</p>
-                </div>  
-                
-                    <img src={info.images.jpg.image_url}>
-                
-                
+                </div>      
+                    <img src={info.images.jpg.image_url} alt="uwu">
+                               
             </div>
         {/each}
         </div>
@@ -56,20 +55,17 @@
 
 
 <style lang="scss">
-    h1 {
-    }
-
-  
 
     div.scroll {
         animation-name: scroll;
         animation-duration: 60s;
         animation-iteration-count: infinite;
-        display: flex;
-        flex-direction: row;
-        max-height: 500px;
         width: inherit;
-        overflow: hidden;
+        max-height: 80vh;
+        overflow: scroll;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-rows: repeat(4, 1fr);
         
     }
 
@@ -91,7 +87,8 @@
         border-color: #000000;
         justify-content: space-between;
         margin: 10px;
-        height: 400px;
+        height: auto;
+        min-width: 150px;
         h2 {
             font-size: 20px;
             font-weight: 500;

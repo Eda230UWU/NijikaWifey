@@ -24,6 +24,7 @@
         margin: 0;
     }
     header {
+        position: fixed;
         padding: 0 20%;
         display: flex;
         justify-content: space-between;
@@ -32,10 +33,6 @@
             height: 3.5em;
             width: 3.5em;
             margin: 1em 0;
-        }
-        h3 {
-            color: aqua;
-            margin: 0;
         }
         section {
             display: flex;
