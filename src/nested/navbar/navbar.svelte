@@ -8,27 +8,29 @@
 <header class="navbar" style:background-color={head_primary[0]}>
     <div class="flex">
         <div class="logo">
-            <img src="/logo.png" />
+            <a href="/">
+                <img src="/logo.png" alt="nijiker"/>
+            </a>
         </div>
-        <h1>NijikaWeb</h1>
+        <h1><a href="/">NijikaWeb</a></h1>
     </div>
-    <section style:background-color={head_navbar[0]}>
+    <section>
         <div>
             <input
                 type="text"
                 placeholder="Search..."
                 id="searchBar"
-                style:background-color={head_navbar[0]}
-            />
+                style:background-color={head_navbar[0]}/>
+        </div>
+        <div id="nekosLink">
+            <a href="/nekos">Nekos</a>
         </div>
     </section>
     <div />
 </header>
 
 <style lang="scss">
-    :global(body) {
-        margin: 0;
-    }
+
 
     div.logo img {
         width: 100%;
@@ -44,6 +46,11 @@
         margin-left: 10%;
         display: flex;
         align-items: center;
+        a  {
+            text-decoration: none;
+            color: black;
+        }   
+            
     }
 
     header.navbar {
@@ -55,24 +62,29 @@
         width: 100vw;
     }
 
-    h3 {
-        color: aqua;
-        margin: 0;
-    }
     section {
+        
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        width: 40%;
+        justify-content: space-evenly;
+        width: 70%;
 
         input {
             padding: 15px 20px;
             height: 1.5em;
-            width: 35em;
+            width: 100%;
             border: 0;
             border-radius: 5px;
             border-color: #dfdfdf;
             inset-block-start: 2px;
         }
+        a{
+            margin-left: 10em;
+            text-decoration: none;
+            font-size: 1.5em;
+            color: black;
+            font-weight: 600;
+        }
     }
+
 </style>
