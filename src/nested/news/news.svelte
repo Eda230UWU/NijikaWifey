@@ -86,7 +86,7 @@
             
             
         }
-        99% {
+        100% {
             min-width: 0px;
             border: 0px;
             margin: 0px;
@@ -214,7 +214,7 @@
         animation-iteration-count: infinite;
         animation-delay: 24s;
     }
-    div#a12 {
+    div#a22 {
         animation-name: scroll;
         animation-duration: 60s;
         animation-iteration-count: infinite;

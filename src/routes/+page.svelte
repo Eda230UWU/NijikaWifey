@@ -21,13 +21,13 @@
 
 <div class="main" style:background-color={colors_primary[0]}>
     <Navbar />
-    <div class="content" style:background-color={colors_secondary[0]}>
+    <div class="content">
         <div class="flex">
-            <div class="sidebar">
+            <div class="sidebar" style:background-color={colors_secondary[0]}>
                 <Mal_win />
                 <Quick_links />
             </div>
-            <div class="news">
+            <div class="news" style:background-color={colors_secondary[0]}>
                 <News />
             </div>
         </div>
@@ -36,8 +36,8 @@
 </div>
 
 <style lang="scss">
+
     * {
-        
         display: flex;
         flex-direction: column;
     }
@@ -47,16 +47,18 @@
         flex-direction: column;
         align-items: center;
         max-width: 100vw;
-        height: 100vh;
+        height: fit-content;
         h1 {
             font-size: large;
         }
     }
 
     div.flex {
-        display: flex;
-        height: 100%;
-        flex-direction: row;
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 3fr 9fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3em;
     }
 
     div.content {
@@ -80,6 +82,7 @@
         margin-left: 90px;
         padding: 20px;
         max-width: 100%;
+        
     }
 
 </style>
