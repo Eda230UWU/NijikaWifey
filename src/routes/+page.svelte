@@ -76,7 +76,7 @@
 
 
     div.news {
-        
+        min-height: 60vh;
         display: block;
         overflow: hidden;
         margin-left: 90px;

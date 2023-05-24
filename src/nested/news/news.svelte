@@ -6,14 +6,14 @@
     async function season_now() {
         const response = await fetch("https://api.jikan.moe/v4/seasons/now");
         const get_season_now = await response.json();
-        console.log(get_season_now)
+        
         return get_season_now;
     }
 
     async function season_next() {
         const response = await fetch("https://api.jikan.moe/v4/seasons/upcoming");
         const get_season_now = await response.json();
-        console.log(get_season_now)
+        
         return get_season_now;
     }
 
@@ -29,11 +29,22 @@
         return HM;
     }
 
+    
+
     let season_info = season_now();
+    let season_info_next = season_next();
+    let now = "400px";
+    let next = "0px";
+    let width1 = "0px";
+    let width2 = "100px";
+    let season_time = "this"
+
 </script>
-
-<h1>Anime this season</h1>
-
+<div class="h1">
+    <button style:max-width={width1} on:click={() =>{next = "0px"; now = "400px"; season_time = "this"; width1 = "0px"; width2 = "100px"}}><p>&#60</p></button>
+    <h1>Anime {season_time} season</h1>
+    <button style:max-width={width2} on:click={() =>{next = "400px"; now = "0px"; season_time = "next"; width2 = "0px"; width1 = "100px"}}><p>&#62</p></button>
+</div>
 
 {#await season_info}
     <div class="loading">
@@ -41,8 +52,8 @@
     </div>
 
     {:then season_info}
-    <div class="animation">
-        <div class="scroll">
+    
+        <div class="scroll" style:max-height={now}>
         {#each season_info.data as info, i}
             <div class="box1" id="a{i + 1}">
                 <div>
@@ -57,7 +68,28 @@
             </div>
         {/each}
         </div>
-    </div>    
+        {#await season_info_next}
+            <p style:display=none></p>
+        {:then season_info_next} 
+            
+        
+        <div class="scroll" style:max-height={next}>
+            {#each season_info_next.data as info_next, i}
+            <div class="box1" id="a{i + 1}">
+                <div>
+                    <h2><a href={info_next.url}>{info_next.title}</a></h2>
+                                        
+                </div>  
+                
+                <img src={info_next.images.jpg.image_url}>
+                
+                
+            </div>
+            
+            {/each}
+        </div>
+        {/await}
+    
     
 {/await}
 
@@ -93,14 +125,32 @@
         }
     }
 
-    h1 {
+    button {
+        overflow: hidden;
+        margin: 10px;
+        background-color: #00000000;
+        border: 0px;
+        transition: all, 1s;
+        padding: 0px;
+    }
+
+    button p {
+        font-size: 24px;
+    }
+
+    
+
+    div.h1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
   
 
     div.scroll {
-        
         display: flex;
+        transition: all, 1s;
         flex-direction: row;
         max-height: 500px;
         width: inherit;
@@ -214,7 +264,7 @@
         animation-iteration-count: infinite;
         animation-delay: 24s;
     }
-    div#a22 {
+    div#a12 {
         animation-name: scroll;
         animation-duration: 60s;
         animation-iteration-count: infinite;
