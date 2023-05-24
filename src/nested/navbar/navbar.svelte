@@ -12,16 +12,16 @@
         </div>
         <h1>NijikaWeb</h1>
     </div>
-    <section style:background-color={head_navbar[0]}>
-        <div>
-            <input
-                type="text"
-                placeholder="Search..."
-                id="searchBar"
-                style:background-color={head_navbar[0]}
-            />
-        </div>
-    </section>
+    
+       
+        <input
+            type="text"
+            placeholder="Search..."
+            id="searchBar"
+            style:background-color={head_navbar[0]}
+        />
+    
+    
     <div />
 </header>
 
@@ -59,12 +59,7 @@
         color: aqua;
         margin: 0;
     }
-    section {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: 40%;
-
+    
         input {
             padding: 15px 20px;
             height: 1.5em;
@@ -74,5 +69,5 @@
             border-color: #dfdfdf;
             inset-block-start: 2px;
         }
-    }
+    
 </style>
