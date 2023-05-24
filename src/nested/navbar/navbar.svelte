@@ -1,8 +1,15 @@
 <script>
+    import { onMount } from "svelte";
     import { colors } from "../../routes/colors";
     const head_primary = colors[0].header_primary;
     const head_navbar = colors[0].header_navbar;
     const colors_logo = colors[0].color_logo;
+    
+    export let search_input;
+
+    onMount(()=> (search_input = ""))
+
+    
 </script>
 
 <header class="navbar" style:background-color={head_primary[0]}>
@@ -20,7 +27,11 @@
                 type="text"
                 placeholder="Search..."
                 id="searchBar"
-                style:background-color={head_navbar[0]}/>
+                style:background-color={head_navbar[0]}
+                bind:value={search_input}
+            />
+            <button>search</button>
+
         </div>
         <div id="nekosLink">
             <a href="/nekos">Nekos</a>
