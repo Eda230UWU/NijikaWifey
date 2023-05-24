@@ -11,6 +11,12 @@
     const colors_secondary = colors[0].color_secondary;
    
 
+    
+
+
+
+
+
 </script>
 
 <div class="main" style:background-color={colors_primary[0]}>
