@@ -15,16 +15,12 @@
         <h1><a href="/">NijikaWeb</a></h1>
     </div>
     <section>
-        <div>
             <input
                 type="text"
                 placeholder="Search..."
                 id="searchBar"
                 style:background-color={head_navbar[0]}/>
-        </div>
-        <div id="nekosLink">
             <a href="/nekos">Nekos</a>
-        </div>
     </section>
     <div />
 </header>
@@ -67,7 +63,7 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        width: 70%;
+        width: 50%;
 
         input {
             padding: 15px 20px;
