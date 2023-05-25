@@ -6,14 +6,14 @@
     async function season_now() {
         const response = await fetch("https://api.jikan.moe/v4/seasons/now");
         const get_season_now = await response.json();
-        
+        console.log(get_season_now);
         return get_season_now;
     }
 
     async function season_next() {
         const response = await fetch("https://api.jikan.moe/v4/seasons/upcoming");
         const get_season_now = await response.json();
-        
+        console.log(get_season_now);
         return get_season_now;
     }
 
