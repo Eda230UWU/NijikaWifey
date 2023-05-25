@@ -62,12 +62,13 @@
     }
 
     header.navbar {
+        position: sticky;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         height: 100px;
         align-items: center;
-        width: 100vw;
+        max-width: 100vw;
     }
 
     section {
