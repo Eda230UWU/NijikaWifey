@@ -33,14 +33,14 @@
 
             }
      function searched(){
-        src2 = getNeko();
-         async function getNeko() {
+        src2 = searchNeko();
+         async function searchNeko() {
                 const response = await fetch(
                     "https://nekos.best/api/v2/search?query="+ search + "&type=1"
                 );
-                const json = await response.json();
-                console.log(json.results[0].url);
-                  return json.results[0].url;
+                const jason = await response.json();
+                console.log(jason.results[0].url);
+                  return jason.results[0].url;
             }
      }
         
@@ -71,7 +71,7 @@
         <p>loading</p>
     {:then src2}
             <div class="nekos">
-                <img {src2} alt=""/>
+                <img src="{src2}" alt=""/>
             </div>
     {/await}
 </main>
