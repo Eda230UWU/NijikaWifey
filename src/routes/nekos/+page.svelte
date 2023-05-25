@@ -13,25 +13,22 @@
             endpoint == "waifu" ||
             endpoint == "neko" ||
             endpoint == "kitsune"
-            ){
-                src = getNeko();
-            } 
-            else {
+        ) {
+            src = getNeko();
+        } else {
             alert("Thats not a category");
-            }
         }
-            async function getNeko() {
-                const response = await fetch(
-                    "https://nekos.best/api/v2/" +
-                        endpoint +
-                        "?amount=" +
-                        amount
-                );
-                const json = await response.json();
-                console.log(json.results[0].url);
-                return json.results[0].url;
-            }
+    }
+    async function getNeko() {
+        const response = await fetch(
+            "https://nekos.best/api/v2/" + endpoint + "?amount=" + amount
+        );
+        const json = await response.json();
+        console.log(json.results[0].url);
+        return json.results[0].url;
+    }
 </script>
+
 <main>
     <Navbar />
     <div>
