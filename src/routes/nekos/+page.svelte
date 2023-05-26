@@ -92,8 +92,8 @@
 
 <style lang="scss">
     .gen_neko {
-        width: calc(60% - 3em);
-        margin: 3em 20%;
+        width: calc(80% - 3em);
+        margin: 3em 10%;
         padding: 1.5em;
         min-height: 100vh;
         border-radius: 1em;
@@ -168,7 +168,7 @@
             margin: 2em;
         }
         img {
-            max-height: 15em;
+            max-height: 22em;
             margin: 1em;
             min-width: calc(50% - 2em);
             border-radius: 10px;
