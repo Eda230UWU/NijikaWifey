@@ -168,7 +168,7 @@
             margin: 2em;
         }
         img {
-            max-height: 22em;
+            max-height: 30%;
             margin: 1em;
             min-width: calc(50% - 2em);
             border-radius: 10px;
