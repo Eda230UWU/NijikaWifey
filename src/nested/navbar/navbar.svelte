@@ -22,14 +22,7 @@
         <h1><a href="/">NijikaWeb</a></h1>
     </div>
     <section>
-            <input
-                type="text"
-                placeholder="Search..."
-                id="searchBar"
-                style:background-color={head_navbar[0]}
-                bind:value={search_input}
-            />
-            <button>search</button>
+           
 
         <div id="nekosLink">
             <a href="/nekos">Nekos</a>
