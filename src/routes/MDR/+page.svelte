@@ -172,6 +172,8 @@
 </div>
 
 <style lang="scss">
+    div.box {display: flex; justify-content: space-between;}
+    
     div.search {
         transition: all, 1s;
         overflow: hidden;
