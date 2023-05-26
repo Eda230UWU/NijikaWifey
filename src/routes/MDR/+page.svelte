@@ -70,7 +70,7 @@
                 `https://api.mangadex.org/manga?limit=20&title=${a}&includedTagsMode=AND&excludedTagsMode=OR&contentRating%5B%5D=safe&contentRating%5B%5D=suggestive&order%5BlatestUploadedChapter%5D=desc&includes%5B%5D=cover_art`
             );
             let gex = await response.json();
-            
+            console.log(gex)                        
             return gex.data;
         }
     }
@@ -95,7 +95,7 @@
                 </div>
                 <div class="results">
                     {#await data}
-                        <p>koubus</p>
+                        <p>Searching for my Nijika</p>
                     {:then data}
                         <div class="container">
                             {#each data as data}
@@ -138,11 +138,13 @@
             <div class="reader">
                 
                 <div class="manga_page">
+                    <button on:click={()=> {page_decrement()}}>previous page</button>
                     {#await cover_url then cover_url}                        
                         <img alt="" src={cover_url}/>
                     {/await}
-                    <button on:click={()=> {page_decrement()}}>previous page</button>
+                    
                     <button on:click={()=> {page_increment()}}>next page</button>
+                    
                 </div>
                 <div class="chapter_list">
                 {#await chapter_list}
@@ -190,9 +192,16 @@
             height: 75vh;
 
             div.manga_page {
+                display: flex;
                 height: 75vh;
                 img {
                     height: 100%;
+                }
+
+                button {
+                    height: 100%;
+                    align-self: flex-start;
+                    justify-self: flex-start;
                 }
             }
 
