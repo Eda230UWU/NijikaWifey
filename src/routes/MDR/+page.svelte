@@ -70,7 +70,7 @@
                 `https://api.mangadex.org/manga?limit=20&title=${a}&includedTagsMode=AND&excludedTagsMode=OR&contentRating%5B%5D=safe&contentRating%5B%5D=suggestive&order%5BlatestUploadedChapter%5D=desc&includes%5B%5D=cover_art`
             );
             let gex = await response.json();
-            
+            console.log(gex)                        
             return gex.data;
         }
     }

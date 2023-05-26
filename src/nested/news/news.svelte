@@ -5,15 +5,13 @@
 
     async function season_now() {
         const response = await fetch("https://api.jikan.moe/v4/seasons/now");
-        const get_season_now = await response.json();
-        
+        const get_season_now = await response.json();        
         return get_season_now;
     }
 
     async function season_next() {
         const response = await fetch("https://api.jikan.moe/v4/seasons/upcoming");
-        const get_season_now = await response.json();
-        
+        const get_season_now = await response.json();        
         return get_season_now;
     }
 
@@ -70,20 +68,15 @@
         </div>
         {#await season_info_next}
             <p style:display=none></p>
-        {:then season_info_next} 
-            
-        
+        {:then season_info_next}
+                
         <div class="scroll" style:max-height={next}>
             {#each season_info_next.data as info_next, i}
             <div class="box1" id="a{i + 1}">
                 <div>
                     <h2><a href={info_next.url}>{info_next.title}</a></h2>
-                                        
-                </div>  
-                
-                <img src={info_next.images.jpg.image_url}>
-                
-                
+                </div>
+                <img src={info_next.images.jpg.image_url}>                
             </div>
             
             {/each}
