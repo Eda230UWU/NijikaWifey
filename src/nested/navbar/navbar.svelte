@@ -68,7 +68,7 @@
         justify-content: space-between;
         height: 100px;
         align-items: center;
-        max-width: 100vw;
+        width: 100vw;
     }
 
     section {
