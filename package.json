@@ -10,16 +10,19 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "^2.0.0",
     "@sveltejs/adapter-node": "^1.2.4",
-    "@sveltejs/kit": "^1.5.0",
+    "@sveltejs/kit": "^1.20.4",
     "node-sass": "^9.0.0",
     "sass": "^1.62.0",
-    "svelte": "^3.54.0",
+    "svelte": "^4.1.2",
     "svelte-preprocess": "^5.0.3",
     "vite": "^4.3.0"
   },
   "type": "module",
   "dependencies": {
+    "@magidoc/plugin-svelte-marked": "^4.0.0",
+    "@types/marked": "^5.0.1",
     "dotenv": "^16.0.3",
+    "marked": "^7.0.2",
     "nekos-best.js": "^6.2.1"
   }
 }

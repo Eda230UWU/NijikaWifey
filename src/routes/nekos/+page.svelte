@@ -1,16 +1,17 @@
 <script>
     import { colors } from "../colors.js";
-    const colors_dark = colors[0].dark;
-    const colors_light = colors[0].light;
-    const colors_primary = colors[0].color_primary;
-    const colors_secondary = colors[0].color_secondary;
-    const head_navbar = colors[0].header_navbar;
     import Navbar from "../../nested/navbar/navbar.svelte";
     let search = "Evangelion";
     let src;
     let src2;
     let endpoint;
     let amount = 1;
+    
+    const colors_dark = colors.dark;
+    const colors_light = colors.light;
+    const colors_primary = colors.color_primary;
+    const colors_secondary = colors.color_secondary;
+    const head_navbar = colors.header_navbar;
 
     function clicked() {
         async function getNeko() {
@@ -168,7 +169,7 @@
             margin: 2em;
         }
         img {
-            max-height: 22em;
+            max-height: 30em;
             margin: 1em;
             min-width: calc(50% - 2em);
             border-radius: 10px;

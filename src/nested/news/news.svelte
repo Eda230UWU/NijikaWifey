@@ -1,7 +1,8 @@
 <script>
     import { colors } from "../../routes/colors.js";
-    const colors_dark = colors[0].dark;
-    const colors_light = colors[0].light;
+    
+    const colors_dark = colors.dark;
+    const colors_light = colors.light;
 
     async function season_now() {
         const response = await fetch("https://api.jikan.moe/v4/seasons/now");
@@ -111,11 +112,19 @@
             
             
         }
-        100% {
+        99% {
             min-width: 0px;
             border: 0px;
             margin: 0px;
         }
+        100% {
+            min-width: calc(20% - 24px);
+            border: solid 2px;
+            margin: 10px;
+
+            
+        }
+
     }
 
     button {
@@ -170,7 +179,7 @@
         border-color: #000000;
         justify-content: space-between;
         margin: 10px;
-        height: 400px;
+        min-height: 100%;
 
         
         
@@ -351,6 +360,7 @@
         background-color: rgb(0,0,0,0);
         align-self: flex-end;
     }
+    
     
     img {
         width: 100%;

@@ -1,8 +1,8 @@
 <script>
 
     import { colors } from "../../routes/colors";  
-    const colors_dark = colors[0].dark;
-    const colors_light = colors[0].light;
+    const colors_dark = colors.dark;
+    const colors_light = colors.light;
 
 
 </script>

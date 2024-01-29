@@ -1,9 +1,10 @@
 <script>
     import { onMount } from "svelte";
     import { colors } from "../../routes/colors";
-    const head_primary = colors[0].header_primary;
-    const head_navbar = colors[0].header_navbar;
-    const colors_logo = colors[0].color_logo;
+
+    const head_primary = colors.header_primary;
+    const head_navbar = colors.header_navbar;
+    const colors_logo = colors.color_logo;
     
     export let search_input;
 

@@ -5,10 +5,10 @@
     import News from "../nested/news/news.svelte";
 
     import { colors } from "../routes/colors.js";
-    const colors_dark = colors[0].dark;
-    const colors_light = colors[0].light;
-    const colors_primary = colors[0].color_primary;
-    const colors_secondary = colors[0].color_secondary;
+    const colors_dark = colors.dark;
+    const colors_light = colors.light;
+    const colors_primary = colors.color_primary;
+    const colors_secondary = colors.color_secondary;
    
 
     
@@ -41,6 +41,8 @@
         display: flex;
         flex-direction: column;
     }
+
+    
 
     div.main {
         
